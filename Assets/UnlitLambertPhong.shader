@@ -51,8 +51,9 @@ Shader "Custom/UnlitLambertPhong"
             {
                 float ambient = 0.3f;
                 float lambert = saturate(dot(i.normal, _WorldSpaceLightPos0));
+                float4 diffuseBrightness = (ambient * _WorldSpaceLightPos0);
                 // sample the texture
-                fixed4 col = tex2D(_MainTex, i.uv) * (ambient + lambert);
+                fixed4 col = tex2D(_MainTex, diffuseBrightness) * (lambert);
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;
