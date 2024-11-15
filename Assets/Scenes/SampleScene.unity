@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 562143039}
   - component: {fileID: 562143043}
   m_Layer: 0
-  m_Name: RImSphere
+  m_Name: RimSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
